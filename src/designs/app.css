@@ -1,0 +1,33 @@
+/*Classes*/
+.button {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+/*IDs*/
+#box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  width: 400px;
+  height: 400px;
+}
+#list {
+  list-style: none;
+}
+#question {
+  text-align: center;
+}
