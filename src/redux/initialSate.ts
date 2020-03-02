@@ -1,1 +1,3 @@
-export const initialSate = {};
+export const initialSate: any = {
+  test: false,
+};

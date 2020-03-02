@@ -1,0 +1,1 @@
+export { beginTriviaAction } from './beginTriviaAction';

@@ -1,11 +1,17 @@
 import React, { PureComponent } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import HomeDisplay from './HomeDisplay';
+import { beginTriviaAction } from '../../redux/actions';
 
-class HomeContainerComponent extends PureComponent {
+type IProps = {
+  beginTrivia: Function;
+};
+
+class HomeContainerComponent extends PureComponent<IProps> {
   beginHandler = (event: any) => {
     console.log('event', event);
+    const { beginTrivia } = this.props;
+    beginTrivia();
   };
   render() {
     return <HomeDisplay beginHandler={this.beginHandler} />;
@@ -14,17 +20,13 @@ class HomeContainerComponent extends PureComponent {
 
 const mapStateToProps = (state: any) => ({});
 
-const mapDispatchToProps = {};
-// const mapDispatchToProps = dispatch => ({
-//   begin: bindActionCreators(
-//     beginTriviaAction,
-//     dispatch,
-//   )
-// });
+const mapDispatchToProps = {
+  beginTrivia: beginTriviaAction,
+};
 
 const HomeContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(HomeContainerComponent);
 
 export { HomeContainer };
