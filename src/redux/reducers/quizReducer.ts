@@ -1,7 +1,7 @@
 import { TRACK_ANSWER, CHANGE_QUESTION } from '../action-types';
-import { quiz as initialSate } from '../initialSate';
+import { quiz as initialState } from '../initialState';
 
-export default function home(state = initialSate, action: any) {
+export default function home(state = initialState, action: any) {
   switch (action.type) {
     case TRACK_ANSWER:
       return {

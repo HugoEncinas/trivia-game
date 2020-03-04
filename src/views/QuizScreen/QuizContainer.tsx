@@ -20,7 +20,6 @@ class QuizContainerComponent extends PureComponent<IProps> {
       changeQuestion,
       history,
     } = this.props;
-    console.log('results', results);
 
     if (results[currentQuestion - 1].correct_answer === answer) {
       trackAnwser(true);

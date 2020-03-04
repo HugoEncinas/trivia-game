@@ -14,6 +14,8 @@ body,
   flex-direction: column;
   justify-content: space-around;
   color: #dedede;
+  overflow-y: auto;
+  padding: 10px;
 }
 
 .title {

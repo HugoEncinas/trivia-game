@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import { StyledButton } from './styled';
 
 export const QuestionDisplay = ({
   question,
@@ -8,23 +8,21 @@ export const QuestionDisplay = ({
 }: any) => (
   <div>
     <h1>{question.category}</h1>
-    <div id="box">
-      <h2 id="question">{question.question}</h2>
-    </div>
+    <h2>{question.question}</h2>
     <p>{currentQuestion} of 10</p>
-    <Button
+    <StyledButton
       variant="contained"
       color="primary"
       onClick={e => questionHandler(e, 'True')}
     >
       True
-    </Button>
-    <Button
+    </StyledButton>
+    <StyledButton
       variant="contained"
       color="primary"
       onClick={e => questionHandler(e, 'False')}
     >
       False
-    </Button>
+    </StyledButton>
   </div>
 );

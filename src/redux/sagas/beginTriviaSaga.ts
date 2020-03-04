@@ -6,9 +6,7 @@ import { forwardTo } from '../utils';
 
 function* beginTriviaSaga({}) {
   try {
-    console.log('beginTriviaSaga');
     const response = yield call(getQuizData, {});
-    console.log('results', response.results);
     yield put(setResultsAction(response.results));
     yield call(forwardTo, '/quiz');
   } catch (error) {

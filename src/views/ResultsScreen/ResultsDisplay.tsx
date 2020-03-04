@@ -1,20 +1,27 @@
 import React from 'react';
-import { Container, Button } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import Result from './Result';
-import { List } from './styled';
+import { List, StyledContainer } from './styled';
 
 type IProps = {
   answersTrack: Array<boolean>;
   questions: Array<any>;
   score: number;
+  restartQuizHandler(event: any): any;
 };
 
-const ResultsDisplay = ({ answersTrack, questions, score }: IProps) => {
-  console.log('answersTrack', answersTrack);
-  return (
-    <Container maxWidth="sm" className="container">
+const ResultsDisplay = ({
+  answersTrack,
+  questions,
+  score,
+  restartQuizHandler,
+}: IProps) => (
+  <StyledContainer maxWidth="sm" className="container">
+    <div>
       <h1>You scored</h1>
       <h1>{score}/10</h1>
+    </div>
+    <div>
       <List>
         {questions.map((question, index) => {
           return (
@@ -28,9 +35,17 @@ const ResultsDisplay = ({ answersTrack, questions, score }: IProps) => {
           );
         })}
       </List>
-      <button className="button">PLAY AGAIN?</button>
-    </Container>
-  );
-};
+    </div>
+
+    <Button
+      variant="contained"
+      color="secondary"
+      onClick={restartQuizHandler}
+      fullWidth={false}
+    >
+      PLAY AGAIN?
+    </Button>
+  </StyledContainer>
+);
 
 export default ResultsDisplay;

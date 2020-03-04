@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import ResultsDisplay from './ResultsDisplay';
-import { beginTriviaAction } from '../../redux/actions';
+import { resetTriviaAction } from '../../redux/actions';
 
 type IProps = {
   answersTrack: Array<boolean>;
   questions: Array<any>;
+  history: any;
+  resetTrivia: Function;
 };
 type IState = {
   score: number;
@@ -25,6 +27,11 @@ class ResultsContainerComponent extends PureComponent<IProps, IState> {
       score,
     });
   }
+  restartQuizHandler = () => {
+    const { history, resetTrivia } = this.props;
+    resetTrivia();
+    history.push('/');
+  };
   render() {
     const { answersTrack, questions } = this.props;
     const { score } = this.state;
@@ -33,6 +40,7 @@ class ResultsContainerComponent extends PureComponent<IProps, IState> {
         answersTrack={answersTrack}
         questions={questions}
         score={score}
+        restartQuizHandler={this.restartQuizHandler}
       />
     );
   }
@@ -44,7 +52,7 @@ const mapStateToProps = (state: any) => ({
 });
 
 const mapDispatchToProps = {
-  beginTrivia: beginTriviaAction,
+  resetTrivia: resetTriviaAction,
 };
 
 const ResultsContainer = connect(
