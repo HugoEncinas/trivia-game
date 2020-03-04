@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
-import homeReducer from './homeReducer';
+
+import home from './homeReducer';
+import quiz from './quizReducer';
 
 const rootReducer = combineReducers({
-  homeReducer,
+  home,
+  quiz,
 });
 
 export default rootReducer;

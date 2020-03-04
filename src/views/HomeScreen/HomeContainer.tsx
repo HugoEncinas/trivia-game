@@ -9,7 +9,6 @@ type IProps = {
 
 class HomeContainerComponent extends PureComponent<IProps> {
   beginHandler = (event: any) => {
-    console.log('event', event);
     const { beginTrivia } = this.props;
     beginTrivia();
   };

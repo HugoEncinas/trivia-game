@@ -1,0 +1,1 @@
+export { getQuizData } from './getQuiz';

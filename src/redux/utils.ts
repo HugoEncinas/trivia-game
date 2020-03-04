@@ -1,3 +1,5 @@
+import { history } from '../App';
+
 export const makeActionCreator = (type: string, ...argNames: any) => {
   const action: any = { type };
   return function(...args: any) {
@@ -8,3 +10,7 @@ export const makeActionCreator = (type: string, ...argNames: any) => {
     return action;
   };
 };
+
+export function forwardTo(location: any) {
+  history.push(location);
+}
