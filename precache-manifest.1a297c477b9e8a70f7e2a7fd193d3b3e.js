@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/trivia-game/static/js/runtime~main.4def217a.js"
   },
   {
-    "revision": "9d1fae607bb35289cc3b",
-    "url": "/trivia-game/static/js/main.9d1fae60.chunk.js"
+    "revision": "ef780d2691163f74a17b",
+    "url": "/trivia-game/static/js/main.ef780d26.chunk.js"
   },
   {
     "revision": "056b3926a93ec39f57d8",
     "url": "/trivia-game/static/js/2.056b3926.chunk.js"
   },
   {
-    "revision": "9d1fae607bb35289cc3b",
+    "revision": "ef780d2691163f74a17b",
     "url": "/trivia-game/static/css/main.be1874f2.chunk.css"
   },
   {
-    "revision": "fba75034c3888a205c4a440282cf01ff",
+    "revision": "942a7177b1259c72d52d7fcdeb3ae2a0",
     "url": "/trivia-game/index.html"
   }
 ];
