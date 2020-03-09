@@ -13,7 +13,7 @@ enum ERoutes {
   quiz = '/quiz',
   results = '/results',
 }
-export const history = createHistory();
+export const history = createHistory({ basename: '/trivia-game' });
 const store = getStore();
 class App extends Component {
   render() {
