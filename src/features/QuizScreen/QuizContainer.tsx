@@ -6,8 +6,8 @@ import { trackAnwserAction, changeQuestionAction } from '../../redux/actions';
 type IProps = {
   results: Array<any>;
   currentQuestion: number;
-  trackAnwser: Function;
-  changeQuestion: Function;
+  trackAnwser: any;
+  changeQuestion: any;
   history: any;
 };
 
@@ -32,6 +32,7 @@ class QuizContainerComponent extends PureComponent<IProps> {
       history.push('/results');
     }
   };
+
   render() {
     const { results, currentQuestion } = this.props;
     return (

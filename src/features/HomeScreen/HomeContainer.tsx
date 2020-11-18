@@ -4,14 +4,15 @@ import HomeDisplay from './HomeDisplay';
 import { beginTriviaAction } from '../../redux/actions';
 
 type IProps = {
-  beginTrivia: Function;
+  beginTrivia: any;
 };
 
 class HomeContainerComponent extends PureComponent<IProps> {
-  beginHandler = (event: any) => {
+  beginHandler = () => {
     const { beginTrivia } = this.props;
     beginTrivia();
   };
+
   render() {
     return <HomeDisplay beginHandler={this.beginHandler} />;
   }

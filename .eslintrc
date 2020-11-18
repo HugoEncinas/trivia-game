@@ -1,0 +1,87 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true
+    },
+    "extends": [
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:react/recommended",
+      "plugin:eslint-comments/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      }
+    },
+    "rules": {
+      "max-len": 0,
+      "react/prop-types": 0,
+      "react-hooks/exhaustive-deps": 0,
+      "react/display-name": 0,
+      "unicorn/filename-case": 0,
+      "unicorn/prefer-query-selector": 0,
+      "no-use-before-define": "off",
+      "no-unused-vars": "off",
+      "semi": "off",
+      "global-require": "off",
+      "@typescript-eslint/no-unused-vars": [
+        1,
+        { "ignoreRestSiblings": true, "argsIgnorePattern": "^_" }
+      ],
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/no-explicit-any": 0,
+      "@typescript-eslint/camelcase": 0,
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+      "@typescript-eslint/naming-convention": 0,
+      "@typescript-eslint/no-unsafe-assignment": 0,
+      "@typescript-eslint/no-unsafe-member-access": 0,
+      "@typescript-eslint/no-unsafe-return": 0,
+      "@typescript-eslint/restrict-template-expressions": 0,
+      "@typescript-eslint/no-floating-promises": 0,
+      "@typescript-eslint/no-unsafe-call": 0, // Temporarily disabled
+      "@typescript-eslint/await-thenable": 0,
+      "@typescript-eslint/indent": 0,
+      "@typescript-eslint/no-unnecessary-type-assertion": 1,
+      "@typescript-eslint/unbound-method": 0, // Having issue with unit test mocked axios
+      "@typescript-eslint/comma-dangle": 0,
+      "@typescript-eslint/semi": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "eslint-comments/disable-enable-pair": [2, { "allowWholeFile": true }],
+      "@typescript-eslint/no-use-before-define": ["warn"],
+      "eslint-comments/no-unlimited-disable": 0,
+      "import/no-extraneous-dependencies": 0,
+      "implicit-arrow-linebreak": 0,
+      "import/prefer-default-export": 0,
+      "operator-linebreak": 0,
+      "function-paren-newline": 0,
+      "no-confusing-arrow": 0,
+      "object-curly-newline": 0,
+      "default-case": 0,
+      "no-plusplus": 0,
+      "arrow-body-style": 0,
+      "import/no-cycle": 0, // Temporarily disabled
+      "linebreak-style": [0, "error", "windows"],
+      "import/extensions": 0,
+      "array-callback-return": 0,
+      "react/jsx-props-no-spreading": 0,
+      "jsx-a11y/label-has-associated-control": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/interactive-supports-focus": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/jsx-one-expression-per-line": 0,
+      "react/jsx-closing-tag-location": 0,
+      "react/no-array-index-key": 0,
+      "react/jsx-wrap-multilines": 0,
+      "react/jsx-curly-newline": 0,
+      "react/jsx-indent": "off",
+      "react/jsx-indent-props": "off"
+    }
+  }
+  

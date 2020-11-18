@@ -31,7 +31,7 @@ const ResultsDisplay = ({
                 answersTrack[index] !== undefined ? answersTrack[index] : false
               }
               key={index}
-            ></Result>
+            />
           );
         })}
       </List>

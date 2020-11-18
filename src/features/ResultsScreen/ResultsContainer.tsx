@@ -7,7 +7,7 @@ type IProps = {
   answersTrack: Array<boolean>;
   questions: Array<any>;
   history: any;
-  resetTrivia: Function;
+  resetTrivia: any;
 };
 type IState = {
   score: number;
@@ -20,18 +20,21 @@ class ResultsContainerComponent extends PureComponent<IProps, IState> {
       score: 0,
     };
   }
+
   componentDidMount() {
     const { answersTrack } = this.props;
-    const score = answersTrack.filter(item => item === true).length;
+    const score = answersTrack.filter((item) => item === true).length;
     this.setState({
       score,
     });
   }
+
   restartQuizHandler = () => {
     const { history, resetTrivia } = this.props;
     resetTrivia();
     history.push('/');
   };
+
   render() {
     const { answersTrack, questions } = this.props;
     const { score } = this.state;

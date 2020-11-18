@@ -11,6 +11,7 @@ export default function home(state = initialState, action: any) {
     case CHANGE_QUESTION:
       return {
         ...state,
+        // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
         currentQuestion: state.currentQuestion + 1,
       };
     default:

@@ -10,10 +10,11 @@ const appReducer = combineReducers({
 });
 
 const rootReducer = (state: any, action: any) => {
+  let rootState = state
   if (action.type === RESET_TRIVIA) {
-    state = initialState;
+    rootState = initialState;
   }
-  return appReducer(state, action);
+  return appReducer(rootState, action);
 };
 
 export default rootReducer;

@@ -4,13 +4,13 @@ import { getQuizData } from '../api';
 import { setResultsAction } from '../actions';
 import { forwardTo } from '../utils';
 
-function* beginTriviaSaga({}) {
+function* beginTriviaSaga() {
   try {
     const response = yield call(getQuizData, {});
     yield put(setResultsAction(response.results));
     yield call(forwardTo, '/quiz');
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 

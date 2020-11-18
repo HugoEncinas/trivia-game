@@ -3,9 +3,9 @@ import { Container } from '@material-ui/core';
 import Question from './Question';
 
 type IProps = {
-  question: Object;
+  question: any;
   currentQuestion: number;
-  questionHandler: Function;
+  questionHandler: any;
 };
 
 const QuizDisplay = ({
@@ -18,7 +18,7 @@ const QuizDisplay = ({
       question={question}
       currentQuestion={currentQuestion}
       questionHandler={questionHandler}
-    ></Question>
+    />
   </Container>
 );
 

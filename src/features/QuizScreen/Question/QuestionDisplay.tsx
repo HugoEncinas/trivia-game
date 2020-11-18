@@ -13,14 +13,14 @@ export const QuestionDisplay = ({
     <StyledButton
       variant="contained"
       color="primary"
-      onClick={e => questionHandler(e, 'True')}
+      onClick={(e) => questionHandler(e, 'True')}
     >
       True
     </StyledButton>
     <StyledButton
       variant="contained"
       color="primary"
-      onClick={e => questionHandler(e, 'False')}
+      onClick={(e) => questionHandler(e, 'False')}
     >
       False
     </StyledButton>
